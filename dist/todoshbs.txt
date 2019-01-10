@@ -1,0 +1,48 @@
+{{!-- <div class ="row">
+    <div class="col-md-4">
+        {{#link-to 'todos.new' class="btn btn-success"}}
+            Create Todo
+        {{/link-to}}
+        <hr>
+        {{outlet}}
+    </div>
+
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-inline">
+                    <div class="form-group">
+                        {{input type="text" class="form-control" value=filter id="search" placeholder="Search Todo.."}}
+                    </div>
+                    {{!-- <button type="submit" class="btn btn-default"> Search </button> --}}
+                </form>
+            </div>
+        </div>
+        <hr>
+        <br>
+
+        {{#if filter}}
+            {{#each filterTodos as |todo|}}
+                <div class="card card-body bg-light">
+                    <h4> {{#link-to 'todos.edit' todo.id}}
+                            {{todo.title}}
+                        {{/link-to}}
+                        <span class="label label-primary float-right"> {{format-date todo.date}} </span></h4>
+                    {{todo.body}}
+                </div>
+            {{/each}}
+        {{else}}
+            {{#each sortedTodos as |todo|}}
+                <div class="card card-body bg-light">
+                    <h4>{{#link-to 'todos.edit'}}
+                            {{todo.title}}
+                        {{/link-to}}
+                         <span class="label label-primary float-right"> {{format-date todo.date}} </span></h4>
+                    {{todo.body}}
+                </div>
+            {{/each}}
+        {{/if}}
+        
+    </div>
+</div> --}}
+

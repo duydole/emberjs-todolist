@@ -1,0 +1,23 @@
+<form id="edit-todo-form">
+    <div class="form-group">
+        <lable>Title</lable>
+        {{input type="text" class="form-control" value = model.title placeholder="Add todo..."}}
+    </div>
+    <div class="form-group">
+        <lable>Due Date</lable>
+        {{input type="date" class="form-control" value=model.date}}
+    </div>
+    <div class="form-group">
+        <lable>Body</lable>
+        {{textarea class="form-control" value=model.body placeholder="Todo Body..."}}
+    </div>
+
+    <button {{action "editTodo" model.id}} class="btn btn-primary">Edit
+    </button>
+    {{#link-to 'todos' class="btn btn-default"}}
+        Close
+    {{/link-to}}
+
+    <button {{action 'deleteTodo' model.id}} class='btn btn-danger float-right'>Delete</button>
+
+</form>
