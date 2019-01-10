@@ -1,4 +1,3 @@
-{{!-- <button type="submit" class="btn btn-default"> Search </button> --}}
 'use strict';
 
 module.exports = function(environment) {
